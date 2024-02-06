@@ -11,6 +11,7 @@
         android:id="@+id/word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
         android:layout_gravity="center"
         android:textSize="36sp"
         android:letterSpacing="0.1" />
@@ -18,11 +19,13 @@
         android:id="@+id/lives"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
+        android:layout_marginTop="16sp"
+        android:textSize="24sp" />
     <TextView
         android:id="@+id/incorrect_guesses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
         android:textSize="16sp" />
 
     <EditText

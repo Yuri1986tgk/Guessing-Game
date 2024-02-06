@@ -3,18 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16sp"
     android:orientation="vertical"
     tools:context="com.hfad.guessinggame.Fragments.ResultFragment">
     <TextView
         android:id="@+id/won_lost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
         android:gravity="center"
         android:textSize="28sp" />
     <Button
         android:id="@+id/new_game_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
         android:layout_gravity="center"
         android:text="Start new game"/>
 </LinearLayout>
