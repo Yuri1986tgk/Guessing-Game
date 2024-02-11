@@ -23,10 +23,12 @@ class ResultFragment : Fragment() {
     ): View {
         _binding = FragmentResultBinding.inflate(inflater, container, false)
         val view = binding.root
+
         val result = ResultFragmentArgs.fromBundle(requireArguments()).result
+
         viewModelFactory = ResultViewModelFactory(result)
         viewModel = ViewModelProvider(this, viewModelFactory)[ResultViewModel::class.java]
-        binding.wonLost.text = ResultFragmentArgs.fromBundle(requireArguments()).result
+
         binding.wonLost.text = viewModel.result
         binding.newGameButton.setOnClickListener {
             view.findNavController()
