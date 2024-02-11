@@ -5,16 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.hfad.guessinggame.GameViewModel
-import com.hfad.guessinggame.R
+import com.hfad.guessinggame.ViewWodel.GameViewModel
 import com.hfad.guessinggame.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
 
-    lateinit var viewModel: GameViewModel
+    private lateinit var viewModel: GameViewModel
 
     private var _binding: FragmentGameBinding? = null
     private val binding get() = _binding!!
@@ -25,10 +23,10 @@ class GameFragment : Fragment() {
 
         _binding = FragmentGameBinding.inflate(inflater, container, false)
         val view = binding.root
-        viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
+        viewModel = ViewModelProvider(this)[GameViewModel::class.java]
         updateScreen()
 
-        binding.guessButton.setOnClickListener() {
+        binding.guessButton.setOnClickListener {
             viewModel.makeGuess(binding.guess.text.toString().uppercase())
             binding.guess.text = null
             updateScreen()
@@ -44,7 +42,7 @@ class GameFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    fun updateScreen() {
+    private fun updateScreen() {
         binding.word.text = viewModel.secretWordDisplay
         binding.lives.text = "You have ${viewModel.livesLeft} lives left."
         binding.incorrectGuesses.text = "Incorrect guesses: ${viewModel.incorrectGuesses}"
