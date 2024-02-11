@@ -37,7 +37,7 @@ class GameViewModel : ViewModel() {
         }
     }
     fun isWon() = secretWord.equals(secretWordDisplay.value, true)
-    fun isLost() = livesLeft.value ?: 0 <= 0
+    fun isLost() = (livesLeft.value ?: 0) <= 0
     fun wonLostMessage() : String {
         var message = ""
         if (isWon()) message = "You won!"
