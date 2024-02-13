@@ -1,4 +1,4 @@
-package com.hfad.guessinggame.Fragments
+package com.hfad.guessinggame.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.hfad.guessinggame.ViewModel.GameViewModel
+import com.hfad.guessinggame.viewModel.GameViewModel
 import com.hfad.guessinggame.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {

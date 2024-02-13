@@ -1,4 +1,4 @@
-package com.hfad.guessinggame.Fragments
+package com.hfad.guessinggame.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,8 @@ import com.hfad.guessinggame.databinding.FragmentResultBinding
 import androidx.navigation.findNavController
 import androidx.lifecycle.ViewModelProvider
 import com.hfad.guessinggame.R
-import com.hfad.guessinggame.ViewModel.ResultViewModel
-import com.hfad.guessinggame.ViewModel.ResultViewModelFactory
+import com.hfad.guessinggame.viewModel.ResultViewModel
+import com.hfad.guessinggame.viewModel.ResultViewModelFactory
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null

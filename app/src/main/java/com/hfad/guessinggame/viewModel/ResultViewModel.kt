@@ -1,4 +1,4 @@
-package com.hfad.guessinggame.ViewModel
+package com.hfad.guessinggame.viewModel
 
 import androidx.lifecycle.ViewModel
 
