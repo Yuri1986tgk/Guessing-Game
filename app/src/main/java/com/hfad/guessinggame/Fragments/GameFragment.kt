@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.hfad.guessinggame.ViewWodel.GameViewModel
+import com.hfad.guessinggame.ViewModel.GameViewModel
 import com.hfad.guessinggame.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {

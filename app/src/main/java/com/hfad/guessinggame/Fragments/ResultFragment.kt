@@ -9,8 +9,8 @@ import com.hfad.guessinggame.databinding.FragmentResultBinding
 import androidx.navigation.findNavController
 import androidx.lifecycle.ViewModelProvider
 import com.hfad.guessinggame.R
-import com.hfad.guessinggame.ViewWodel.ResultViewModel
-import com.hfad.guessinggame.ViewWodel.ResultViewModelFactory
+import com.hfad.guessinggame.ViewModel.ResultViewModel
+import com.hfad.guessinggame.ViewModel.ResultViewModelFactory
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
@@ -29,7 +29,8 @@ class ResultFragment : Fragment() {
         viewModelFactory = ResultViewModelFactory(result)
         viewModel = ViewModelProvider(this, viewModelFactory)[ResultViewModel::class.java]
 
-        binding.wonLost.text = viewModel.result
+        binding.resultViewModel = viewModel
+
         binding.newGameButton.setOnClickListener {
             view.findNavController()
                 .navigate(R.id.action_resultFragment_to_gameFragment)

@@ -1,4 +1,4 @@
-package com.hfad.guessinggame.ViewWodel
+package com.hfad.guessinggame.ViewModel
 
 import androidx.lifecycle.ViewModel
 
