@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs")
+    id ("org.jetbrains.kotlin.kapt")
 
 }
 
@@ -37,11 +38,15 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
 dependencies {
     val nav_version = "2.7.6"
+
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
 
     implementation( "androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
